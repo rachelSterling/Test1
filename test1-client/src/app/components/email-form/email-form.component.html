@@ -1,0 +1,13 @@
+
+<div [formGroup]="emailForm">
+    <input type="email" formControlName="email" placeholder="Enter Email" />
+    <button [disabled]="emailForm.invalid" (click)="sendEmail()">Send</button>
+  </div>
+  <div *ngIf="message">
+    Sent time: {{ message }}
+  </div>
+  <div *ngIf="errorMessage" class="err-msg">
+     {{ errorMessage }}
+  </div>
+
+  
